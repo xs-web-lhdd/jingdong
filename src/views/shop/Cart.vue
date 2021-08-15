@@ -28,13 +28,13 @@
         </div>
         <template
           v-for="(item) in productList"
-          :key="item.id"
+          :key="item._id"
         >
           <div v-if="item.num > 0" class="produce__item" >
             <div
               class="produce__item__checked iconfont"
               v-html="item.check ? '&#xe6f9;' : '&#xe60c;'"
-              @click="() => changeCartItemCheck(shopId, item.id)"
+              @click="() => changeCartItemCheck(shopId, item._id)"
             >
             </div>
             <img :src="item.imgUrl" class="produce__item__img">
@@ -142,7 +142,7 @@ const useCartEffect = (shopId) => {
 
   const changeCartItemCheck = (shopId, productId) => {
     // 同步修改数据
-    console.log(shopId)
+    console.log(productId)
     store.commit('changeCartItemCheck', {
       shopId, productId
     })

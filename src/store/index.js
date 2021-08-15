@@ -93,7 +93,6 @@ export default createStore({
     // 改变是否选中逻辑内容
     changeCartItemCheck (state, payload) {
       const { shopId, productId } = payload
-      // console.log(shopId, productId)
       const product = state.cartList[shopId].productList[productId]
       product.check = !product.check
       setLocalCartList(state)
