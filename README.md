@@ -14,6 +14,16 @@ cd jingdong
 
 此时可以启动项目了：npm run dev
 
+在项目启动前记得开启数据库，这样才能连接，启动数据库指令：
+
+```bash
+# window系统中要以管理员的身份启动命令行
+# 启动数据库
+net start mongodb
+# 关闭数据库
+net stop mondodb
+```
+
 #### 数据库如何操作：
 
 ##### 插入文档1：
